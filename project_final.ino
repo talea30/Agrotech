@@ -132,8 +132,8 @@ void loop() {
 
   adc0 = ads.readADC_SingleEnded(0);    // read pins of ADS // pin of first pressure sensor
   adc1 = ads.readADC_SingleEnded(1);    // read pins of ADS // pin of second pressure sensor
-  adc2 = ads.readADC_SingleEnded(2);
-  adc3 = ads.readADC_SingleEnded(3);
+ // adc2 = ads.readADC_SingleEnded(2);  // $$$$$$$
+ // adc3 = ads.readADC_SingleEnded(3);  // $$$$$$$
 
   voltage_0 =(adc0 * 0.125 * 2) / 1000;    // divided by 1000 to move from mV to V; 0.125 from SetGain; 2 from voltage divider;
   pressure_0 = (voltage_0/5 - 0.04) / 0.009;    // formula to exchange voltage to pressure according to the information of the sensor 
